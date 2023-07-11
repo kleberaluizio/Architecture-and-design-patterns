@@ -18,12 +18,8 @@ public class Employee {
 		this.salary = salary;
 	}
 
-	public void readjustSalary(BigDecimal raise) {
-		BigDecimal adjustPercentage = raise.divide(salary, RoundingMode.HALF_UP);
-		if (adjustPercentage.compareTo(new BigDecimal("0.4")) > 0) {
-			throw new ExceptionValidation("Adjust cannot be over 40% of its salary!");
-		}
-		this.salary = this.salary.add(raise);
+	public void updateSalary(BigDecimal adjustSalary) {
+		this.salary = adjustSalary;
 		this.lastAdjustDate = LocalDate.now();
 	}
 
