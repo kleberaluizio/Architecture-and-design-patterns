@@ -1,7 +1,6 @@
 package com.kleberaluizio.model;
 
 import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.time.LocalDate;
 
 public class Employee {
@@ -18,8 +17,8 @@ public class Employee {
 		this.salary = salary;
 	}
 
-	public void updateSalary(BigDecimal adjustSalary) {
-		this.salary = adjustSalary;
+	public void updateSalary(BigDecimal newSalary) {
+		this.salary = newSalary;
 		this.lastAdjustDate = LocalDate.now();
 	}
 
