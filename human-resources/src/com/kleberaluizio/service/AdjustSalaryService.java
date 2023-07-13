@@ -13,7 +13,7 @@ public class AdjustSalaryService{
         this.validations = validations;
     }
 
-    public void adjustSalary(Employee employee, BigDecimal raise) { 
+    public void adjustSalary(Employee employee, BigDecimal raise) {
         this.validations.forEach(v -> v.validate(employee,raise));
 
         BigDecimal adjustSalary = employee.getSalary().add(raise);
