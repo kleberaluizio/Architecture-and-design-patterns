@@ -4,17 +4,11 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class Employee {
-    private String name;
-	private String cpf;
-	private Role role;
-	private BigDecimal salary;
+	private PersonalData personalData;
 	private LocalDate lastAdjustDate;
 
 	public Employee(String nome, String cpf, Role role, BigDecimal salary) {
-		this.name = nome;
-		this.cpf = cpf;
-		this.role = role;
-		this.salary = salary;
+		this.personalData = new PersonalData(nome, cpf, role, salary);
 	}
 
 	public void updateSalary(BigDecimal newSalary) {
@@ -23,15 +17,15 @@ public class Employee {
 	}
 
 	public String getName() {
-		return name;
+		return this.personalData.getName();
 	}
 
 	public void setName(String name) {
-		this.name = name;
+		this.personalData.setName(name);
 	}
 
 	public String getCpf() {
-		return cpf;
+		return this.personalData.;
 	}
 
 	public void setCpf(String cpf) {
