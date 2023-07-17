@@ -12,7 +12,7 @@ public class Employee {
 	}
 
 	public void updateSalary(BigDecimal newSalary) {
-		this.salary = newSalary;
+		this.personalData.setSalary(newSalary);
 		this.lastAdjustDate = LocalDate.now();
 	}
 
@@ -25,27 +25,23 @@ public class Employee {
 	}
 
 	public String getCpf() {
-		return this.personalData.;
+		return this.personalData.getCpf();
 	}
 
 	public void setCpf(String cpf) {
-		this.cpf = cpf;
+		this.personalData.setCpf(cpf);
 	}
 
 	public Role getRole() {
-		return role;
+		return this.personalData.getRole();
 	}
 
 	public void setRole(Role role) {
-		this.role = role;
+		this.personalData.setRole(role);
 	}
 
 	public BigDecimal getSalary() {
-		return salary;
-	}
-
-	public void setSalary(BigDecimal salary) {
-		this.salary = salary;
+		return this.personalData.getSalary();
 	}
 
 	public LocalDate getLastAdjustDate() {
@@ -57,6 +53,6 @@ public class Employee {
 	}
 
 	public void promote(Role newRole) {
-		this.role = newRole;
+		this.personalData.setRole(newRole);
 	}
 }

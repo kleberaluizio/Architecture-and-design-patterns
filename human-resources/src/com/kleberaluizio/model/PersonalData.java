@@ -35,6 +35,10 @@ public class PersonalData {
         return role;
     }
 
+    public void setSalary(BigDecimal salary) {
+        this.salary = salary;
+    }
+
     public void setRole(Role role) {
         this.role = role;
     }
