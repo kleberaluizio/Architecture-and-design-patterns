@@ -1,4 +1,4 @@
-package com.kleberaluizio.service;
+package com.kleberaluizio.service.adjust;
 
 import com.kleberaluizio.model.Employee;
 

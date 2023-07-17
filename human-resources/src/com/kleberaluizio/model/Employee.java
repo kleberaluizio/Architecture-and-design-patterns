@@ -62,4 +62,7 @@ public class Employee {
 		this.lastAdjustDate = lastAdjustDate;
 	}
 
+	public void promote(Role newRole) {
+		this.role = newRole;
+	}
 }
